@@ -53,7 +53,7 @@ class Solution:
             num = 0;
             for i in range(len(numbers)-1):
                 num = numbers[i]
-                if num+1 != numbers[i+1] && num != numbers[i+1]
+                if num+1 != numbers[i+1] and num != numbers[i+1]
                 miss += num+1
             return miss
 
