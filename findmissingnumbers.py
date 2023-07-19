@@ -48,13 +48,17 @@ class Solution:
             #return type: list of int
 
             #TODO: Write code below to return an int list with the solution to the prompt.
+            if len(numbers) == 0:
+                return "Invalid input"
+            if len(numbers) == 1:
+                return "None missing"
             miss = []
             numbers.sort()
             num = 0;
             for i in range(len(numbers)-1):
                 num = numbers[i]
                 if num+1 != numbers[i+1] and num != numbers[i+1]:
-                    miss = miss + (num+1)
+                    miss = miss + (int(num+1))
             return miss
 
 def main():
