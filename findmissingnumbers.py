@@ -58,7 +58,9 @@ class Solution:
             for i in range(len(numbers)-1):
                 num = numbers[i]
                 if num+1 != numbers[i+1] and num != numbers[i+1]:
-                    miss = miss + (int(num+1))
+                    add = (int(num+1))
+                    new = [add]
+                    miss = miss + new
             return miss
 
 def main():
