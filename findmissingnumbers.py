@@ -46,22 +46,34 @@ class Solution:
     def findMissingNumbers(self, numbers):
             #type numbers: list of float
             #return type: list of int
-
+            import math
             #TODO: Write code below to return an int list with the solution to the prompt.
             if len(numbers) == 0:
                 return "Invalid input"
             if len(numbers) == 1:
                 return "None missing"
-            miss = []
-            numbers.sort()
-            num = 0;
-            for i in range(len(numbers)-1):
-                num = numbers[i]
-                if num+1 != numbers[i+1] or num != numbers[i+1]:
-                    add = (int(num+1))
-                    new = [add]
-                    miss = miss + new
-            return miss
+
+            output = []
+            minimum = math.ceil(min(numbers))
+            maximum = math.ceil(max(numbers))
+            for i in range(minimum, maximum):
+                x = 0
+                for num in numbers:
+                    if num%1 != 0:
+                        num = matg.ceil(num)
+                    if i == num:
+                        x += 1
+                if x == 0:
+                    output.append(i)
+            if output == []:
+                return "None missing"
+            return output
+
+
+
+
+
+
 
 def main():
     array = input().split(" ")
