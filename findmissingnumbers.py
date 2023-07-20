@@ -60,7 +60,7 @@ class Solution:
                 x = 0
                 for num in numbers:
                     if num%1 != 0:
-                        num = matg.ceil(num)
+                        num = math.ceil(num)
                     if i == num:
                         x += 1
                 if x == 0:
